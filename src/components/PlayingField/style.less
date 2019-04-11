@@ -1,0 +1,17 @@
+@import '../../less/main.less';
+
+
+.playing-field{ width:100%; padding:10px; background-color:#fff; border-radius:3px;
+    &__block{ margin-bottom:36px; }
+    &__output-message{ font-weight:300; line-height:20px; }
+}
+
+.btn-show-result{ text-align:center; margin-bottom:24px;
+    button{ padding:13px 20px; color:rgba(0,0,0, .64); border:1px solid @color-grey; border-radius:40px; box-shadow:0 3px 7px rgba(0,0,0,.15); .transition(); backface-visibility:hidden;
+        &:hover{ transform:translateY(1px); }
+        &:active{ transform:translateY(2px); }
+    }
+    &.disabled{ opacity:.5; }
+}
+
+.spinner{ text-align:center; margin-bottom:24px; }

@@ -1,0 +1,34 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // From HR PRoject
+    // Because backend api use underscore in own json.
+    "camelcase": "off",
+    // 2 new lines like in google closure standard.
+    "import/newline-after-import": ["error", { "count": 2 }],
+    // Has problems with IDE. no profit from rule when all files are jsx
+    "react/jsx-filename-extension": "off",
+    // Stateless functions has no real diffs to class in performance. In future maybe
+    "react/prefer-stateless-function": "off",
+    "react/sort-comp": "off",
+
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+
+    "func-names": "off",
+
+    /////////////////// temp
+    // пока не понятно как писать методы внутри класса которым не нужен this. Возможно static
+    "class-methods-use-this": 0,
+    /////////////////// temp
+    // !!!!!!! Надо это убрать как только уйдем от Демо разработки
+    "jsx-a11y/no-static-element-interactions": 0,
+    "import/prefer-default-export": 0,
+    "no-debugger": 0,
+
+    "no-plusplus": "off"
+  }
+}

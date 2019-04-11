@@ -1,0 +1,77 @@
+@screen-xs: 479px;
+@screen-sm: 767px;
+@screen-md: 991px;
+@screen-lg: 1275px;
+
+.max(@w, @rules){
+	@media screen and (max-width:@w) {
+	    @rules();
+	}
+}
+.min(@w, @rules){
+	@media screen and (min-width:@w) {
+	    @rules();
+	}
+}
+
+.xs(@rules){
+	@media screen and (max-width:@screen-xs) {
+	    @rules();
+	}
+}
+.sm(@rules){
+	@media screen and (max-width:@screen-sm) {
+	    @rules();
+	}
+}
+.min-sm(@rules){
+	@media screen and (min-width: (@screen-sm + 1)) {
+	    @rules();
+	}
+}
+.md(@rules){
+	@media screen and (max-width:@screen-md) {
+	    @rules();
+	}
+}
+.min-md(@rules){
+	@media screen and (min-width: (@screen-md + 1)) {
+	    @rules();
+	}
+}
+.lg(@rules){
+	@media screen and (max-width:@screen-lg) {
+	    @rules();
+	}
+}
+.min-lg(@rules){
+	@media screen and (min-width: (@screen-lg + 1)) {
+	    @rules();
+	}
+}
+
+.lg-md(@rules){
+	@media screen and (min-width: (@screen-md + 1)) and (max-width:@screen-lg) {
+		@rules();
+	}
+}
+
+.md-sm(@rules){
+	@media screen and (min-width: (@screen-sm + 1)) and (max-width:@screen-md) {
+		@rules();
+	}
+}
+
+.sm-xs(@rules){
+	@media screen and (min-width: (@screen-xs + 1)) and (max-width:@screen-sm) {
+		@rules();
+	}
+}
+
+.retina(@rules){
+	@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), 
+	only screen and (min-resolution: 144dpi){
+		@rules();	
+	}
+}
