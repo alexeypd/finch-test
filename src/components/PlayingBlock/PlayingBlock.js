@@ -25,8 +25,6 @@ class PlayingBlock extends React.Component {
     name: '',
   };
 
-  componentDidMount() {}
-
   render() {
     const { fieldNumber, itemsQuantity, name, isSelect, onClickSelectItem } = this.props;
     const itemsArray = getArrayNeedLength(itemsQuantity);

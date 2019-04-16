@@ -36,7 +36,7 @@ class PlayingField extends PureComponent {
   isSelect = blockName => itemId =>
     !!this.state.selectedNumber[blockName].find(item => item === itemId);
 
-  onClickSelectItem = (blockName, maxSelectedItem) => (itemId) => {
+  onClickSelectItem = (blockName, maxSelectedItem) => itemId => () => {
     const { selectedNumber } = this.state;
 
     const searchResult = selectedNumber[blockName].filter(item => item === itemId)[0];
@@ -140,7 +140,6 @@ class PlayingField extends PureComponent {
 
         <div className="playing-field__block">
           <PlayingBlock
-            key={1}
             name="firstField"
             fieldNumber={1}
             itemsQuantity={19}
@@ -148,7 +147,6 @@ class PlayingField extends PureComponent {
             onClickSelectItem={this.onClickSelectItem('firstField', 8)}
           />
           <PlayingBlock
-            key={2}
             name="secondField"
             fieldNumber={2}
             itemsQuantity={2}

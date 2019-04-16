@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const PlayingItem = ({ item, isSelect, onClick }) => (
-  <div
-    className={`playing-section__item ${isSelect ? 'active' : ''}`}
-    onClick={() => {
-      onClick(item);
-    }}
-  >
+  <div className={`playing-section__item ${isSelect ? 'active' : ''}`} onClick={onClick(item)}>
     {item}
   </div>
 );
